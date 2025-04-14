@@ -1,13 +1,11 @@
 import streamlit as st
-import numpy as np 
-import pandas as pd
+add_selectbox = st.sidebar.selectbox(
+    'O quanto você gosta de estar conectado?',
+    ('Email','Home phone', 'Mobile phone')
 
-st.title(" UM TESTE SIMPLES")
-dataframe = pd.DataFrame(
-    np.random.randn(10,20),
-    columns=("col %d" % i for i in range(20)))
+)
 
-st.dataframe(dataframe)
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+add_slider = st.sidebar.slider(
+    'select a range of values', 
+    0.0, 100.0, (25.0, 75.0)
 )
